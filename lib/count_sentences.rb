@@ -23,7 +23,7 @@ class String
     # end
 
     count = []
-    self.each do |item|  
+    self.each do |item|
       if self.sentence? || self.question? || self.exclamation?
         count << self.split('.')
         count << self.split('!')
