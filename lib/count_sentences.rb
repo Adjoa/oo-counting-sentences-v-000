@@ -27,6 +27,7 @@ class String
        return count.size
      else
        return 0
+     end
     # self.each do |item|
     #   if self.sentence? || self.question? || self.exclamation?
     #     count << self.split('.')
