@@ -15,7 +15,25 @@ class String
   end
 
   def count_sentences
-    
+    # if self.include?('"')
+      self.tr('"','')
+
+    # elsif self.include?("'")
+      self.tr("'",'')
+    # end
+
+    count = []
+    self.each do |item|  
+      if self.sentence? || self.question? || self.exclamation?
+        count << self.split('.')
+        count << self.split('!')
+        count << self.split('?')
+        # binding.pry
+        return count.size
+      else
+        return 0
+      end
+    end
   end
 
 end
