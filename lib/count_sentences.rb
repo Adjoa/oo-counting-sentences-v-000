@@ -24,11 +24,11 @@ class String
 
      count = self.scan(/\b[a-z]{1,}[!|?!.]/)
      puts "#{count}"
-     if count.size != 0
+    #  if count.size != 0
        return count.size
-     else
-       return 0
-     end
+    #  else
+    #    return 0
+    #  end
     # self.each do |item|
     #   if self.sentence? || self.question? || self.exclamation?
     #     count << self.split('.')
