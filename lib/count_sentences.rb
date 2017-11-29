@@ -15,8 +15,6 @@ class String
   end
 
   def count_sentences
-    # self.tr('"','')
-    # self.tr("'",'')
     count = self.scan(/\b[a-z]{1,}[!|?!.]/i)
     return count.size
   end
