@@ -23,6 +23,7 @@ class String
     # end
 
      count = self.scan(/\b[a-z]{1,}[!|?!.]/)
+     puts "#{count}"
      if count.size != 0
        return count.size
      else
