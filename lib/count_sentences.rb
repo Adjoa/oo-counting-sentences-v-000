@@ -22,18 +22,22 @@ class String
       self.tr("'",'')
     # end
 
-    count = []
-    self.each do |item|
-      if self.sentence? || self.question? || self.exclamation?
-        count << self.split('.')
-        count << self.split('!')
-        count << self.split('?')
-        # binding.pry
-        return count.size
-      else
-        return 0
-      end
-    end
+     count = self.scan(/\b[a-z]{1,}[!|?!.]/)
+     if count.size != 0
+       return count.size
+     else
+       return 0
+    # self.each do |item|
+    #   if self.sentence? || self.question? || self.exclamation?
+    #     count << self.split('.')
+    #     count << self.split('!')
+    #     count << self.split('?')
+    #     # binding.pry
+    #     return count.size
+    #   else
+    #     return 0
+    #   end
+    # end
   end
 
 end
